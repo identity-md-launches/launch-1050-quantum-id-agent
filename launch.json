@@ -1,0 +1,20 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "QuantumToken",
+    "name": "Quantum ID agent",
+    "symbol": "QUANTUM",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0x0000000000000000000000000000000000000000",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "792281625142643375935439503360000"
+  },
+  "economics": {"poolBps":8000,"initialMarketCapWei":"10000000000000000000","remainderTo":"0x419c3cee9568cfa394d7cf39d59ae49c968e7405"},
+  "notes": "QuantumToken in src/QuantumToken.sol has a parameterless constructor that mints 1,000,000,000 QUANTUM with 18 decimals once to msg.sender. It has no post-deployment minting, transfer fees, administrative powers or initialization calls. No application contracts are required. The native ETH pool uses the permitted 0.3% fee tier with tick spacing 60. Native ETH sorts as currency0 and QUANTUM as currency1, so the provenance sqrtPriceX96 is sqrt(1000000000000000000000000000 / 10000000000000000000) * 2^96 = 792281625142643375935439503360000. The deployer derives the opening price from economics.initialMarketCapWei and token.totalSupply."
+}
